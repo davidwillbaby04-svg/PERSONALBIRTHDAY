@@ -1,0 +1,47 @@
+.animated-bg{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(#081A34,#102A55,#1A4276);
+    overflow:hidden;
+    z-index:-1;
+}
+
+.moon{
+    position:absolute;
+    top:70px;
+    right:80px;
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle at 30% 30%, #ffffff, #f0f0f0);
+
+    box-shadow:
+        0 0 40px rgba(255,255,255,.6),
+        0 0 100px rgba(255,255,255,.3);
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+
+    animation:twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}

@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #ff6b81;
+  --secondary-color: #ff9a9e;
+  --background-color: #fff5f7;
+  --text-color: #333333;
+  --white: #ffffff;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}

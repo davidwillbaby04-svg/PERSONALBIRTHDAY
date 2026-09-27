@@ -1,0 +1,399 @@
+/* =================================
+   BIRTHDAY LETTER
+================================= */
+
+.birthday-letter {
+    width: 100%;
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 0 45px;
+    box-sizing: border-box;
+}
+
+.letter-wrapper {
+    position: relative;
+    width: min(760px, 94%);
+    perspective: 1000px;
+}
+
+/* =================================
+   LETTER PAPER
+================================= */
+
+.letter-paper {
+    position: relative;
+
+    padding: 48px 58px;
+
+    border-radius: 14px;
+    overflow: hidden;
+
+    background-image: var(--letter-photo);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #4f4147;
+
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.28),
+        0 5px 18px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.letter-paper:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 28px 65px rgba(0, 0, 0, 0.32),
+        0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* =================================
+   PHOTO OVERLAY
+================================= */
+
+.letter-photo-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 248, 245, 0.52),
+            rgba(255, 250, 242, 0.46)
+        );
+
+    backdrop-filter: blur(0.4px);
+    -webkit-backdrop-filter: blur(0.4px);
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.letter-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* =================================
+   FLOWERS
+================================= */
+
+.letter-flower {
+    position: absolute;
+    z-index: 5;
+
+    font-size: 42px;
+
+    filter:
+        drop-shadow(0 5px 8px rgba(0, 0, 0, 0.15));
+
+    pointer-events: none;
+
+    animation:
+        flowerFloat 4s ease-in-out infinite;
+}
+
+.letter-flower-left {
+    left: -8px;
+    top: -12px;
+}
+
+.letter-flower-right {
+    right: -8px;
+    bottom: -10px;
+
+    animation-delay: 1s;
+}
+
+@keyframes flowerFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(4deg);
+    }
+}
+
+/* =================================
+   TOP DECORATION
+================================= */
+
+.letter-top-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 27px;
+
+    color: #c87896;
+    font-size: 17px;
+}
+
+.letter-top-decoration svg {
+    font-size: 20px;
+
+    animation:
+        heartbeat 2.5s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* =================================
+   GREETING
+================================= */
+
+.letter-greeting {
+    margin: 0 0 25px;
+
+    color: #151015;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.75);
+}
+
+/* =================================
+   LETTER BODY
+================================= */
+
+.letter-body {
+    color: #340b64;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    line-height: 1.9;
+
+    text-align: left;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.45);
+}
+
+.letter-body p {
+    margin: 0 0 18px;
+}
+
+.letter-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* =================================
+   SIGNATURE
+================================= */
+
+.letter-signature {
+    margin-top: 32px;
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(120, 80, 100, 0.22);
+
+    text-align: right;
+}
+
+.letter-signature p {
+    margin: 0 0 5px;
+
+    color: #111;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.letter-signature h3 {
+    margin: 0;
+
+    color: #0a0a0a;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* =================================
+   BOTTOM DECORATION
+================================= */
+
+.letter-bottom-decoration {
+    margin-top: 27px;
+
+    text-align: center;
+
+    color: #d1849e;
+
+    letter-spacing: 7px;
+    font-size: 17px;
+
+    opacity: 0.9;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 700px) {
+
+    .letter-paper {
+        padding: 40px 38px;
+    }
+
+    .letter-flower {
+        font-size: 35px;
+    }
+
+    .letter-greeting {
+        font-size: 24px;
+    }
+
+    .letter-body {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .letter-signature h3 {
+        font-size: 17px;
+    }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .birthday-letter {
+        padding: 10px 0 30px;
+    }
+
+    .letter-wrapper {
+        width: 94%;
+    }
+
+    .letter-paper {
+        padding: 30px 20px;
+
+        border-radius: 10px;
+
+        /* Keep the photo clearly visible */
+        background-position: center;
+    }
+
+    .letter-photo-overlay {
+        background:
+            linear-gradient(
+                135deg,
+                rgba(255, 248, 245, 0.52),
+                rgba(255, 250, 242, 0.46)
+            );
+    }
+
+    .letter-flower {
+        font-size: 29px;
+    }
+
+    .letter-flower-left {
+        left: -5px;
+        top: -8px;
+    }
+
+    .letter-flower-right {
+        right: -5px;
+        bottom: -7px;
+    }
+
+    .letter-top-decoration {
+        gap: 10px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .letter-top-decoration svg {
+        font-size: 17px;
+    }
+
+    .letter-greeting {
+        margin-bottom: 19px;
+        font-size: 22px;
+    }
+
+    .letter-body {
+        font-size: 13.5px;
+        line-height: 1.75;
+    }
+
+    .letter-body p {
+        margin-bottom: 15px;
+    }
+
+    .letter-signature {
+        margin-top: 25px;
+        padding-top: 15px;
+    }
+
+    .letter-signature p {
+        font-size: 12px;
+    }
+
+    .letter-signature h3 {
+        font-size: 16px;
+    }
+
+    .letter-bottom-decoration {
+        margin-top: 20px;
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+}
+
+/* =================================
+   VERY SMALL PHONES
+================================= */
+
+@media (max-width: 360px) {
+
+    .letter-paper {
+        padding: 27px 17px;
+    }
+
+    .letter-greeting {
+        font-size: 20px;
+    }
+
+    .letter-body {
+        font-size: 12.5px;
+        line-height: 1.7;
+    }
+
+    .letter-flower {
+        font-size: 25px;
+    }
+}

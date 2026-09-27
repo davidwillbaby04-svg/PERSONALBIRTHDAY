@@ -1,0 +1,321 @@
+.share-page {
+    width: 100%;
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px 0;
+}
+
+
+/* =========================
+   CARD
+   ========================= */
+
+.share-card {
+    position: relative;
+
+    width: min(650px, 94%);
+
+    padding:
+        45px 40px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 250, 245, 0.94);
+
+    box-shadow:
+        0 20px 55px
+        rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   FLOWER
+   ========================= */
+
+.share-flower {
+    font-size: 42px;
+
+    margin-bottom: 8px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(0, 0, 0, 0.12)
+        );
+}
+
+
+/* =========================
+   TEXT
+   ========================= */
+
+.share-card h2 {
+    margin: 0 0 15px;
+
+    color: #a15e7b;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            2rem,
+            5vw,
+            2.8rem
+        );
+}
+
+.share-main-text {
+    margin: 0 auto 10px;
+
+    color: #66555c;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 18px;
+}
+
+.share-sub-text {
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    color: #806e75;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   DIVIDER
+   ========================= */
+
+.share-divider {
+    margin: 25px 0;
+
+    color: #d1819f;
+
+    letter-spacing: 7px;
+}
+
+
+/* =========================
+   QUESTION
+   ========================= */
+
+.share-question {
+    margin: 0 0 18px;
+
+    color: #795e69;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 16px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.share-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.share-button {
+    width: min(320px, 100%);
+
+    border: none;
+
+    border-radius: 30px;
+
+    padding:
+        13px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
+}
+
+.share-button svg {
+    font-size: 18px;
+}
+
+
+/* WhatsApp */
+
+.whatsapp-button {
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    color: #66866f;
+}
+
+
+/* Instagram */
+
+.instagram-button {
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    color: #a96880;
+}
+
+
+/* Copy */
+
+.copy-button {
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    color: #806775;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.share-footer {
+    margin: 28px 0 0;
+
+    color: #a77b8c;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 14px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 500px) {
+
+    .share-page {
+        min-height: 400px;
+    }
+
+    .share-card {
+        width: 94%;
+
+        padding:
+            35px 20px;
+
+        border-radius: 22px;
+    }
+
+    .share-flower {
+        font-size: 34px;
+    }
+
+    .share-main-text {
+        font-size: 16px;
+    }
+
+    .share-sub-text {
+        font-size: 13px;
+    }
+
+    .share-button {
+        width: 100%;
+
+        padding:
+            12px 15px;
+    }
+}
+/* =========================
+   RESTART BUTTON
+   ========================= */
+
+.restart-button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 22px auto 0;
+
+    padding: 10px 20px;
+
+    border: 1px solid rgba(161, 94, 123, 0.25);
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    color: #8f6373;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.restart-button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .restart-button {
+        padding: 9px 18px;
+
+        font-size: 12px;
+    }
+}

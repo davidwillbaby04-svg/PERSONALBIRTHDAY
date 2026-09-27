@@ -1,0 +1,18 @@
+:root{
+
+    --primary:#0B1F3A;
+    --secondary:#162B52;
+
+    --pink:#F6B6D8;
+
+    --gold:#FFD166;
+
+    --white:#FFFFFF;
+
+    --text:#EAF2FF;
+
+    --card:rgba(255,255,255,.12);
+
+    --glass:blur(12px);
+
+}

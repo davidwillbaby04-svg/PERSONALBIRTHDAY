@@ -1,0 +1,27 @@
+.petals-container{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+}
+
+.petal{
+    position:absolute;
+    top:-10%;
+    font-size:18px;
+    opacity:.8;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+    0%{
+        transform:translateY(-10vh) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(120vh) translateX(100px) rotate(360deg);
+    }
+
+}

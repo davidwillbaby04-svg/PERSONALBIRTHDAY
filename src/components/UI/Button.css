@@ -1,0 +1,13 @@
+.primary-btn{
+    padding:16px 42px;
+    border-radius:50px;
+    background:#d7b4f3;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+}

@@ -1,0 +1,643 @@
+/* =========================
+   NIRU WRAPPED
+   ========================= */
+
+.niru-wrapped {
+    width: 100%;
+
+    min-height: 500px;
+
+    padding:
+        20px 0 45px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.wrapped-header {
+    width: min(750px, 94%);
+
+    margin: 0 auto 28px;
+}
+
+
+.wrapped-small-title {
+    margin-bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.wrapped-header h1 {
+    margin: 0;
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    line-height: 1.05;
+
+    text-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.wrapped-header h1 span {
+    color: #ffd4e3;
+
+    font-style: italic;
+}
+
+
+.wrapped-header p {
+    margin:
+        15px auto 0;
+
+    max-width: 500px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    text-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.wrapped-hero {
+    position: relative;
+
+    width: min(680px, 94%);
+
+    margin: 0 auto 25px;
+
+    padding:
+        30px 25px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.35);
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.15);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    overflow: hidden;
+}
+
+
+.hero-star {
+    position: absolute;
+
+    top: 18px;
+
+    right: 22px;
+
+    color: #ffe6a8;
+
+    font-size: 20px;
+
+    animation:
+        starPulse 2s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes starPulse {
+
+    0%,
+    100% {
+        transform:
+            scale(1)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            scale(1.2)
+            rotate(10deg);
+    }
+}
+
+
+.hero-label {
+    margin-bottom: 8px;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.wrapped-hero h2 {
+    margin: 0;
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            1.7rem,
+            5vw,
+            2.5rem
+        );
+}
+
+
+.wrapped-hero p {
+    margin:
+        10px auto 20px;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ENERGY BAR
+   ========================= */
+
+.energy-bar {
+    width: min(450px, 90%);
+
+    height: 9px;
+
+    margin: 0 auto 8px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.2);
+
+    overflow: hidden;
+}
+
+
+.energy-bar div {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        rgba(255, 220, 235, 0.9);
+
+    box-shadow:
+        0 0 15px
+        rgba(255, 210, 230, 0.5);
+}
+
+
+.energy-text {
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   GRID
+   ========================= */
+
+.wrapped-grid {
+    width: min(900px, 94%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =========================
+   CARDS
+   ========================= */
+
+.wrapped-card {
+    min-width: 0;
+
+    padding:
+        20px 15px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.3);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 0, 0, 0.12);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    transition:
+        box-shadow 0.3s ease;
+}
+
+
+.wrapped-card:hover {
+    box-shadow:
+        0 16px 35px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.wrapped-card-icon {
+    width: 42px;
+
+    height: 42px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    color: #ffe0eb;
+
+    font-size: 18px;
+}
+
+
+.wrapped-card-title {
+    min-height: 32px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.wrapped-card-value {
+    margin:
+        7px 0;
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+}
+
+
+.wrapped-card p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 11px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================
+   FINAL STATEMENT
+   ========================= */
+
+.wrapped-final {
+    width: min(700px, 94%);
+
+    margin:
+        35px auto 20px;
+}
+
+
+.final-line {
+    margin-bottom: 12px;
+
+    color: #ffd9e7;
+
+    letter-spacing: 8px;
+
+    font-size: 12px;
+}
+
+
+.wrapped-final h2 {
+    margin: 0;
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            1.4rem,
+            4vw,
+            2rem
+        );
+
+    font-weight: 500;
+}
+
+
+.wrapped-final h3 {
+    margin:
+        3px 0 8px;
+
+    color: #ffd2e2;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            1.7rem,
+            5vw,
+            2.5rem
+        );
+
+    font-style: italic;
+}
+
+
+.wrapped-final p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.wrapped-next-button {
+    margin-top: 5px;
+
+    padding:
+        12px 26px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.4);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.wrapped-next-button:hover {
+    background:
+        rgba(255, 255, 255, 0.22);
+
+    border-color:
+        rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .wrapped-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .wrapped-card {
+        padding:
+            18px 12px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .niru-wrapped {
+        padding:
+            10px 0 30px;
+    }
+
+    .wrapped-small-title {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+    .wrapped-header h1 {
+        font-size: 2.3rem;
+    }
+
+    .wrapped-header p {
+        font-size: 12px;
+    }
+
+    .wrapped-hero {
+        padding:
+            25px 18px;
+
+        border-radius: 20px;
+    }
+
+    .wrapped-hero h2 {
+        font-size: 1.7rem;
+    }
+
+    .wrapped-hero p {
+        font-size: 12px;
+    }
+
+    .wrapped-grid {
+        width: 96%;
+
+        gap: 8px;
+    }
+
+    .wrapped-card {
+        padding:
+            15px 8px;
+
+        border-radius: 15px;
+    }
+
+    .wrapped-card-icon {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 15px;
+    }
+
+    .wrapped-card-title {
+        font-size: 9px;
+    }
+
+    .wrapped-card-value {
+        font-size: 18px;
+    }
+
+    .wrapped-card p {
+        font-size: 9px;
+    }
+
+    .wrapped-final {
+        margin-top: 28px;
+    }
+
+    .wrapped-next-button {
+        padding:
+            11px 22px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL
+   ========================= */
+
+@media (max-width: 360px) {
+
+    .wrapped-header h1 {
+        font-size: 2rem;
+    }
+
+    .wrapped-card-value {
+        font-size: 16px;
+    }
+
+    .wrapped-card p {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,397 @@
+/* =====================================================
+   CHAPTER LAYOUT — NIRUVERSE
+   ===================================================== */
+
+.chapter-layout {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 55px 20px 38px;
+
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   TITLE
+   ===================================================== */
+
+.chapter-title {
+    margin: 0 0 32px;
+
+    color: #ffffff;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(2rem, 5vw, 3.2rem);
+
+    font-weight: 600;
+
+    line-height: 1.15;
+
+    text-align: center;
+
+    letter-spacing: 0.2px;
+
+    text-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =====================================================
+   CONTENT
+   ===================================================== */
+
+.chapter-content {
+    width: min(1050px, 100%);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.chapter-navigation {
+    width: min(1050px, 100%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 34px;
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   NAVIGATION SIDES
+   ===================================================== */
+
+.navigation-side {
+    min-width: 110px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.navigation-left {
+    justify-content: flex-start;
+}
+
+
+.navigation-right {
+    justify-content: flex-end;
+}
+
+
+/* =====================================================
+   PREMIUM GLASS BUTTON
+   ===================================================== */
+
+.chapter-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-width: 108px;
+
+    padding: 11px 22px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.38);
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.18),
+            rgba(190, 120, 160, 0.28)
+        );
+
+    color: #ffffff;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(40, 20, 50, 0.20),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.18);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   HOVER
+   ===================================================== */
+
+.chapter-button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.25),
+            rgba(190, 120, 160, 0.42)
+        );
+
+    border-color:
+        rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 12px 30px
+        rgba(40, 20, 50, 0.28),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.25);
+}
+
+
+/* =====================================================
+   BUTTON ARROWS
+   ===================================================== */
+
+.chapter-button span {
+    display: inline-flex;
+
+    align-items: center;
+}
+
+
+.chapter-button span:first-child {
+    line-height: 1;
+}
+
+
+/* =====================================================
+   PREVIOUS BUTTON
+   ===================================================== */
+
+.previous-button span:first-child {
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+   ===================================================== */
+
+.next-button span:last-child {
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   FOCUS ACCESSIBILITY
+   ===================================================== */
+
+.chapter-button:focus-visible {
+    outline: none;
+
+    border-color:
+        rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 255, 255, 0.18),
+
+        0 10px 28px
+        rgba(40, 20, 50, 0.25);
+}
+
+
+/* =====================================================
+   DISABLED STATE
+   ===================================================== */
+
+.chapter-button:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transform: none !important;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .chapter-layout {
+        padding:
+            45px 16px 34px;
+    }
+
+    .chapter-content {
+        width: 100%;
+    }
+
+    .chapter-navigation {
+        width: 94%;
+
+        margin-top: 30px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .chapter-layout {
+        min-height: 100vh;
+
+        padding:
+            32px 10px 28px;
+    }
+
+
+    .chapter-title {
+        margin-bottom: 22px;
+
+        font-size:
+            clamp(1.65rem, 8vw, 2.15rem);
+
+        line-height: 1.15;
+    }
+
+
+    .chapter-navigation {
+        width: 94%;
+
+        margin-top: 24px;
+    }
+
+
+    .navigation-side {
+        min-width: 90px;
+    }
+
+
+    .chapter-button {
+        min-width: 92px;
+
+        padding:
+            9px 16px;
+
+        font-size: 12px;
+
+        gap: 5px;
+    }
+
+
+    .previous-button span:first-child,
+    .next-button span:last-child {
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .chapter-layout {
+        padding:
+            27px 8px 24px;
+    }
+
+
+    .chapter-title {
+        margin-bottom: 18px;
+
+        font-size: 1.55rem;
+    }
+
+
+    .chapter-navigation {
+        width: 96%;
+
+        margin-top: 20px;
+    }
+
+
+    .navigation-side {
+        min-width: 82px;
+    }
+
+
+    .chapter-button {
+        min-width: 82px;
+
+        padding:
+            8px 13px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .chapter-button {
+        transition: none;
+    }
+}
